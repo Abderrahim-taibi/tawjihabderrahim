@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawjih Abderrahim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #05e0f6;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: white;
+            margin: 0;
+        }
+        
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-top: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+        }
+        
+        .school-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .school-item {
+            background-color: #ffa500;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .school-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .school-item img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .school-item h3 {
+            margin: 0;
+            font-size: 22px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tawjih Abderrahim</h1>
+        <input type="text" id="search" placeholder="Rechercher une école..." onkeyup="searchSchool()">
+    </header>
+    <main>
+        <div class="school-grid" id="school-list">
+            <div class="school-item">
+                <img src="ENCG.png" alt="ENCG Casablanca">
+                <a href="desc.html"><h3>ENCG </h3></a>
+            </div>
+            <div class="school-item">
+                <img src="ensam.jpeg" alt="ENSAM Rabat">
+                <a href="ensam.html"><h3>ENSAM</h3></a>
+            </div>
+            <div class="school-item">
+                <img src="FST.webp" alt="FST Settat">
+                <h3>FST </h3>
+            </div>
+            <div class="school-item">
+                <img src="iscae.jpeg" alt="ISCAE">
+                <h3>ISCAE</h3>
+            </div>
+            <div class="school-item">
+                <img src="ens.jpeg" alt="ENS">
+                <h3>ENS/ESEF/FSE/ENSET</h3>
+            </div>
+			<div class="school-item">
+                <img src="ENSA.jpeg" alt="ENSA">
+                <a href="ensa.html"><h3>ENSA</h3></a>
+            </div>
+			 <div class="school-item">
+                <img src="BTS.png" alt="ESITH">
+                <h3>BTS</h3>
+            </div>
+			 <div class="school-item">
+                <img src="imm.jpg" alt="ESITH">
+                <h3>IMT/IMM</h3>
+            </div>
+			 <div class="school-item">
+                <img src="est.png" alt="EST">
+                <h3>EST</h3>
+            </div>
+			 <div class="school-item">
+                <img src="fmpd.jpeg" alt="FMPD">
+                <h3>FMPD</h3>
+            </div>
+			 <div class="school-item">
+                <img src="ensc.jpeg" alt="ESITH">
+                <h3>ENSC</h3>
+            </div>
+			 <div class="school-item">
+                <img src="arm.jpeg" alt="ESITH">
+                <h3>ARM</h3>
+            </div>
+			 <div class="school-item">
+                <img src="BTS.png" alt="ESITH">
+                <h3></h3>
+            </div>
+			</div>
+
+        </div>
+    </main>
+    <script>
+        function searchSchool() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let items = document.querySelectorAll('.school-item');
+            items.forEach(item => {
+                let schoolName = item.querySelector('h3').textContent.toLowerCase();
+                if (schoolName.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

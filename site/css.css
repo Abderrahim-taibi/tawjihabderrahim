@@ -1,0 +1,348 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font family */
+}
+
+/* Body Styling */
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem; /* Consistent text size */
+    padding: 0 15px; /* Add padding to avoid content touching edges */
+    margin: 0;
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+/* Header Styling */
+header {
+    background-color: #05e0f6;
+    color: #fff;
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	
+}
+
+header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4c89ff;
+}
+
+/* Section Styling */
+section {
+    padding: 40px 15px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #4c89ff;
+    font-weight: 600;
+}
+
+/* About Section */
+#about p {
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* Courses Section */
+#courses .course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.course {
+    background-color: #ffb05e;
+    padding: 30px;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.course h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.course p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+form {
+    display: grid;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffb05e;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+form input, form textarea {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4c89ff;
+    outline: none;
+}
+
+form button {
+    background-color: #4c89ff;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #05e0f6;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #05e0f6;
+    color: #fff;
+    padding: 20px 15px;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4c89ff;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+    z-index: 9999;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.notification.show {
+    display: block;
+    animation: fadeInOut 3s forwards;
+}
+
+/* Animation for the notification */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        margin-right: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+    }
+
+    #courses .course-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form button {
+        font-size: 1.1rem;
+    }
+}
+button{
+	width: 200px;
+	height: 70px;
+	border-radius: 2px;
+	background-color:#ffb05e;
+}
+a{
+	text-align:center;
+	color: black;
+	font-size: 20px;
+}
+.logo-left{
+	width: 300px;
+	height: 300px;
+	left: 0;
+	position: relative;
+	transform: translateX(-7%);
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+	
+}
+.tiya{
+	margin-left:100px;
+}
+.logo-right{
+	width: 300px;
+	height: 300px;
+	left: 0;
+	position: relative;
+	transform: translateX(+40%);
+}
+#social-media-bar {
+	width:1100px;
+	height:500px;
+	margin-bottom:10px;
+	margin: 10px;
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+#social-media-bar h3 {
+     background-color: rgba(0, 0, 0, 0.5); /* K7al b transparence 50% */
+  color: white; /* Lktaba b lbyed bach tban */
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom-width:10px;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+	
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.social-icon img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+ #social-media-bar {
+        background-image: url('bnn.png'); /* Background dyal banner */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 40px;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+		width:auto;
+		height:auto;
+    }
+.video-container img{
+	 width: 300px;
+     transition: transform 0.3s ease;
+	 padding: 3px;
+	 margin: 10px;
+	 border-radius: 6%; /* Makes the video thumbnail circular */
+        transition: transform 0.3s ease;
+}
+.video-container img:hover{
+transform: scale(1.1); 
+}
+#register button{
+	border-radius:20px;
+}
